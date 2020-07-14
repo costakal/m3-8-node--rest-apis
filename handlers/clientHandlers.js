@@ -2,7 +2,6 @@ const { v4: uuidv4 } = require("uuid");
 const { clients } = require("../data/clients");
 
 const handleClients = (req, res) => {
-  console.log(clients);
   res.status(200).json(clients);
 };
 
