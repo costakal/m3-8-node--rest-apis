@@ -10,9 +10,29 @@ Provide him with a series of REST endpoints that meet all, or most of the RESTfu
 
 Write out each endpoint, its method, and brief description of waht it should do.
 
-| endpoint | method | Description            |
-| -------- | ------ | ---------------------- |
-| `/test`  | `GET`  | It is a test endpoint. |
+| endpoint                             | method  | Description                                              |
+| ------------------------------------ | ------- | -------------------------------------------------------- |
+| `/test`                              | `GET`   | It is a test endpoint.                                   |
+| `/seat/:seatId`                      | `PUT`   | Would seat CLIENT at seatID                              |
+| `/seat/avail`                        | `GET`   | Returns available seats                                  |
+| `/stock`                             | `GET`   | Returns a list of inventory stock items                  |
+| `/stock/:stockId`                    | `GET`   | Returns all pertinent information regarding X stock item |
+| `/stock/addItem`                     | `PUT`   | Adds/modifies an item in inventory                       |
+| `/clients`                           | `GET`   | Generates list of clients in the system                  |
+| `/clients/:clientsId`                | `POST`  | Creates a user loyalty program account in DB             |
+| `/products`                          | `GET`   | Returns a list of available products                     |
+| `/products/:productId`               | `GET`   | Returns specific product                                 |
+| `/products/promos`                   | `GET`   | Returns a list of current promotions                     |
+| `/products/promos/:promoId`          | `GET`   | Returns specific promo item                              |
+| `/products/promos/:promoId`          | `DEL`   | Removes specific promo item when promotion is over       |
+| `/products/promos/:promoId/duration` | `PATCH` | Extends duration of specific promotion                   |
+| `/employees`                         | `GET`   | Generates list of active employees                       |
+| `/employees/shift`                   | `PUT`   | Updates employees for the work day                       |
+| `/employees/:employeeId`             | `GET`   | Returns all information for specific employee            |
+| `/projections`                       | `GET`   | Returns the estimated projections for the month          |
+| `/sales`                             | `GET`   | Returns current sales for the day                        |
+| `/sales/overview`                    | `GET`   | Returns sales for current fiscal year                    |
+| `/deposits`                          | `GET`   | Returns deposits made for the day                        |
 
 _This activity is more about the discussion in how to best organize data endpoints. There will not be any coding._
 
