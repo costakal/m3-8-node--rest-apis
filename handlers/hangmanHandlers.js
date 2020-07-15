@@ -25,6 +25,17 @@ const handleHangman = (req, res) => {
   }
 };
 
-const handleGuess = (req, res) => {};
+const handleGuess = (req, res) => {
+  const { id, letter } = req.params;
+  const currentHangmanObj = words.find((word) => {
+    if (word.id === id) {
+      return word;
+    }
+  });
+  const wordArray = currentHangmanObj.word.split("").map((ltr) => {
+    return letter === ltr;
+  });
+  res.status(200).json({ status: 200, data: { array: wordArray, letter } });
+};
 
 module.exports = { handleWord, handleHangman, handleGuess };
